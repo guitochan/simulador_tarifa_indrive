@@ -7,7 +7,7 @@ public class SimuladorTarifa
         string nombre, nombreVehiculo;
         double distancia, tarifaBase = 0.0, costoKm = 0.0, subtotal = 0.0, descuento = 0.0, total = 0.0;
         int horas, tipoVehiculo;
-        bool esHoraPico;
+        bool esHoraPico = false;
 
         Console.WriteLine("==============================================");
         Console.WriteLine("         InDrive - Simulador de Tarifa        ");
@@ -88,6 +88,10 @@ public class SimuladorTarifa
         if (descuento > 0)
         {
             Console.WriteLine("Descuento: S/." + Math.Round(descuento,2));    
+        }
+        else
+        {
+            Console.WriteLine("Descuento: No aplica");
         }
         Console.WriteLine("==============================================");
         Console.WriteLine("La tarifa final es: S/." + total);
